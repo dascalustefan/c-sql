@@ -31,6 +31,31 @@
             this.buton_start = new System.Windows.Forms.Button();
             this.buton_client = new System.Windows.Forms.Button();
             this.panel_admin = new System.Windows.Forms.Panel();
+            this.buton_goo = new System.Windows.Forms.Button();
+            this.buton_back = new System.Windows.Forms.Button();
+            this.label_opt = new System.Windows.Forms.Label();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.variablepanel = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.searchbox = new System.Windows.Forms.TextBox();
+            this.Search = new System.Windows.Forms.Button();
+            this.Delete = new System.Windows.Forms.Button();
+            this.Cancel = new System.Windows.Forms.Button();
+            this.Add = new System.Windows.Forms.Button();
             this.panel_registerclient = new System.Windows.Forms.Panel();
             this.buton_done = new System.Windows.Forms.Button();
             this.textBox_vinn = new System.Windows.Forms.TextBox();
@@ -78,50 +103,27 @@
             this.textBox_remove_lastname = new System.Windows.Forms.TextBox();
             this.textBox_remove_firstname = new System.Windows.Forms.TextBox();
             this.label_remove_firstname = new System.Windows.Forms.Label();
-            this.buton_goo = new System.Windows.Forms.Button();
-            this.buton_back = new System.Windows.Forms.Button();
-            this.label_opt = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.panel_client = new System.Windows.Forms.Panel();
             this.buton_back_client = new System.Windows.Forms.Button();
             this.buton_go = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textbox_VIN = new System.Windows.Forms.TextBox();
-            this.variablepanel = new System.Windows.Forms.Panel();
-            this.Cancel = new System.Windows.Forms.Button();
-            this.Add = new System.Windows.Forms.Button();
-            this.Delete = new System.Windows.Forms.Button();
-            this.Search = new System.Windows.Forms.Button();
-            this.searchbox = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.label2 = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.textBox7 = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.label8 = new System.Windows.Forms.Label();
+            this.adminpaneltxt = new System.Windows.Forms.Panel();
             this.panel_admin.SuspendLayout();
+            this.variablepanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_registerclient.SuspendLayout();
             this.panel_specificinvoice.SuspendLayout();
             this.panel_specificclient.SuspendLayout();
             this.panel_removeclient.SuspendLayout();
             this.panel_client.SuspendLayout();
-            this.variablepanel.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.adminpaneltxt.SuspendLayout();
             this.SuspendLayout();
             // 
             // buton_start
             // 
             this.buton_start.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.buton_start.Location = new System.Drawing.Point(146, 180);
+            this.buton_start.Location = new System.Drawing.Point(140, 102);
             this.buton_start.Margin = new System.Windows.Forms.Padding(2);
             this.buton_start.Name = "buton_start";
             this.buton_start.Size = new System.Drawing.Size(79, 19);
@@ -132,7 +134,7 @@
             // 
             // buton_client
             // 
-            this.buton_client.Location = new System.Drawing.Point(146, 216);
+            this.buton_client.Location = new System.Drawing.Point(140, 138);
             this.buton_client.Margin = new System.Windows.Forms.Padding(2);
             this.buton_client.Name = "buton_client";
             this.buton_client.Size = new System.Drawing.Size(79, 19);
@@ -143,6 +145,7 @@
             // 
             // panel_admin
             // 
+            this.panel_admin.Controls.Add(this.adminpaneltxt);
             this.panel_admin.Controls.Add(this.variablepanel);
             this.panel_admin.Controls.Add(this.panel_registerclient);
             this.panel_admin.Controls.Add(this.panel_showstatistics);
@@ -150,15 +153,254 @@
             this.panel_admin.Controls.Add(this.panel_specificinvoice);
             this.panel_admin.Controls.Add(this.panel_specificclient);
             this.panel_admin.Controls.Add(this.panel_removeclient);
-            this.panel_admin.Controls.Add(this.buton_goo);
-            this.panel_admin.Controls.Add(this.buton_back);
-            this.panel_admin.Controls.Add(this.label_opt);
-            this.panel_admin.Controls.Add(this.comboBox1);
             this.panel_admin.Location = new System.Drawing.Point(333, 54);
             this.panel_admin.Margin = new System.Windows.Forms.Padding(2);
             this.panel_admin.Name = "panel_admin";
-            this.panel_admin.Size = new System.Drawing.Size(614, 392);
+            this.panel_admin.Size = new System.Drawing.Size(577, 254);
             this.panel_admin.TabIndex = 2;
+            // 
+            // buton_goo
+            // 
+            this.buton_goo.Location = new System.Drawing.Point(160, 111);
+            this.buton_goo.Margin = new System.Windows.Forms.Padding(2);
+            this.buton_goo.Name = "buton_goo";
+            this.buton_goo.Size = new System.Drawing.Size(56, 19);
+            this.buton_goo.TabIndex = 10;
+            this.buton_goo.Text = "Go >";
+            this.buton_goo.UseVisualStyleBackColor = true;
+            this.buton_goo.Click += new System.EventHandler(this.buton_goo_Click);
+            // 
+            // buton_back
+            // 
+            this.buton_back.Location = new System.Drawing.Point(25, 111);
+            this.buton_back.Margin = new System.Windows.Forms.Padding(2);
+            this.buton_back.Name = "buton_back";
+            this.buton_back.Size = new System.Drawing.Size(56, 19);
+            this.buton_back.TabIndex = 9;
+            this.buton_back.Text = "< Back";
+            this.buton_back.UseVisualStyleBackColor = true;
+            this.buton_back.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // label_opt
+            // 
+            this.label_opt.AutoSize = true;
+            this.label_opt.Location = new System.Drawing.Point(86, 16);
+            this.label_opt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_opt.Name = "label_opt";
+            this.label_opt.Size = new System.Drawing.Size(69, 13);
+            this.label_opt.TabIndex = 8;
+            this.label_opt.Text = "Select option";
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Register client",
+            "Remove client",
+            "Specific client",
+            "Specific invoice",
+            "Order pieces",
+            "Show statistics",
+            "Clienti"});
+            this.comboBox1.Location = new System.Drawing.Point(72, 53);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.TabIndex = 7;
+            // 
+            // variablepanel
+            // 
+            this.variablepanel.Controls.Add(this.dataGridView1);
+            this.variablepanel.Controls.Add(this.label8);
+            this.variablepanel.Controls.Add(this.label7);
+            this.variablepanel.Controls.Add(this.label6);
+            this.variablepanel.Controls.Add(this.label5);
+            this.variablepanel.Controls.Add(this.label4);
+            this.variablepanel.Controls.Add(this.label3);
+            this.variablepanel.Controls.Add(this.textBox7);
+            this.variablepanel.Controls.Add(this.textBox6);
+            this.variablepanel.Controls.Add(this.textBox5);
+            this.variablepanel.Controls.Add(this.textBox4);
+            this.variablepanel.Controls.Add(this.textBox3);
+            this.variablepanel.Controls.Add(this.textBox2);
+            this.variablepanel.Controls.Add(this.label2);
+            this.variablepanel.Controls.Add(this.textBox1);
+            this.variablepanel.Controls.Add(this.searchbox);
+            this.variablepanel.Controls.Add(this.Search);
+            this.variablepanel.Controls.Add(this.Delete);
+            this.variablepanel.Controls.Add(this.Cancel);
+            this.variablepanel.Controls.Add(this.Add);
+            this.variablepanel.Location = new System.Drawing.Point(404, 4);
+            this.variablepanel.Name = "variablepanel";
+            this.variablepanel.Size = new System.Drawing.Size(96, 63);
+            this.variablepanel.TabIndex = 14;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Location = new System.Drawing.Point(352, 371);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(35, 13);
+            this.label8.TabIndex = 19;
+            this.label8.Text = "label8";
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(352, 332);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(35, 13);
+            this.label7.TabIndex = 18;
+            this.label7.Text = "label7";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(352, 295);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(35, 13);
+            this.label6.TabIndex = 17;
+            this.label6.Text = "label6";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(131, 405);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(35, 13);
+            this.label5.TabIndex = 16;
+            this.label5.Text = "label5";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(131, 367);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(35, 13);
+            this.label4.TabIndex = 15;
+            this.label4.Text = "label4";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(131, 332);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(35, 13);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "label3";
+            // 
+            // textBox7
+            // 
+            this.textBox7.Location = new System.Drawing.Point(240, 368);
+            this.textBox7.Name = "textBox7";
+            this.textBox7.Size = new System.Drawing.Size(100, 20);
+            this.textBox7.TabIndex = 13;
+            // 
+            // textBox6
+            // 
+            this.textBox6.Location = new System.Drawing.Point(240, 329);
+            this.textBox6.Name = "textBox6";
+            this.textBox6.Size = new System.Drawing.Size(100, 20);
+            this.textBox6.TabIndex = 12;
+            // 
+            // textBox5
+            // 
+            this.textBox5.Location = new System.Drawing.Point(240, 292);
+            this.textBox5.Name = "textBox5";
+            this.textBox5.Size = new System.Drawing.Size(100, 20);
+            this.textBox5.TabIndex = 11;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(11, 398);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 20);
+            this.textBox4.TabIndex = 10;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(11, 364);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.TabIndex = 9;
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(11, 324);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.TabIndex = 8;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(131, 295);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(35, 13);
+            this.label2.TabIndex = 7;
+            this.label2.Text = "label2";
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(11, 8);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(921, 264);
+            this.dataGridView1.TabIndex = 6;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(11, 288);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.TabIndex = 5;
+            // 
+            // searchbox
+            // 
+            this.searchbox.AllowDrop = true;
+            this.searchbox.Location = new System.Drawing.Point(764, 364);
+            this.searchbox.Name = "searchbox";
+            this.searchbox.Size = new System.Drawing.Size(156, 20);
+            this.searchbox.TabIndex = 4;
+            // 
+            // Search
+            // 
+            this.Search.Location = new System.Drawing.Point(845, 405);
+            this.Search.Name = "Search";
+            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.TabIndex = 3;
+            this.Search.Text = "Search";
+            this.Search.UseVisualStyleBackColor = true;
+            // 
+            // Delete
+            // 
+            this.Delete.Location = new System.Drawing.Point(764, 405);
+            this.Delete.Name = "Delete";
+            this.Delete.Size = new System.Drawing.Size(75, 23);
+            this.Delete.TabIndex = 2;
+            this.Delete.Text = "Delete";
+            this.Delete.UseVisualStyleBackColor = true;
+            // 
+            // Cancel
+            // 
+            this.Cancel.Location = new System.Drawing.Point(683, 405);
+            this.Cancel.Name = "Cancel";
+            this.Cancel.Size = new System.Drawing.Size(75, 23);
+            this.Cancel.TabIndex = 1;
+            this.Cancel.Text = "Cancel";
+            this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
+            // 
+            // Add
+            // 
+            this.Add.Location = new System.Drawing.Point(589, 406);
+            this.Add.Name = "Add";
+            this.Add.Size = new System.Drawing.Size(87, 23);
+            this.Add.TabIndex = 0;
+            this.Add.Text = "Add";
+            this.Add.UseVisualStyleBackColor = true;
+            this.Add.Click += new System.EventHandler(this.Add_Click_1);
             // 
             // panel_registerclient
             // 
@@ -634,54 +876,6 @@
             this.label_remove_firstname.TabIndex = 0;
             this.label_remove_firstname.Text = "First name";
             // 
-            // buton_goo
-            // 
-            this.buton_goo.Location = new System.Drawing.Point(218, 180);
-            this.buton_goo.Margin = new System.Windows.Forms.Padding(2);
-            this.buton_goo.Name = "buton_goo";
-            this.buton_goo.Size = new System.Drawing.Size(56, 19);
-            this.buton_goo.TabIndex = 10;
-            this.buton_goo.Text = "Go >";
-            this.buton_goo.UseVisualStyleBackColor = true;
-            this.buton_goo.Click += new System.EventHandler(this.buton_goo_Click);
-            // 
-            // buton_back
-            // 
-            this.buton_back.Location = new System.Drawing.Point(83, 180);
-            this.buton_back.Margin = new System.Windows.Forms.Padding(2);
-            this.buton_back.Name = "buton_back";
-            this.buton_back.Size = new System.Drawing.Size(56, 19);
-            this.buton_back.TabIndex = 9;
-            this.buton_back.Text = "< Back";
-            this.buton_back.UseVisualStyleBackColor = true;
-            this.buton_back.Click += new System.EventHandler(this.button1_Click);
-            // 
-            // label_opt
-            // 
-            this.label_opt.AutoSize = true;
-            this.label_opt.Location = new System.Drawing.Point(144, 85);
-            this.label_opt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_opt.Name = "label_opt";
-            this.label_opt.Size = new System.Drawing.Size(69, 13);
-            this.label_opt.TabIndex = 8;
-            this.label_opt.Text = "Select option";
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Register client",
-            "Remove client",
-            "Specific client",
-            "Specific invoice",
-            "Order pieces",
-            "Show statistics"});
-            this.comboBox1.Location = new System.Drawing.Point(130, 122);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 7;
-            // 
             // panel_client
             // 
             this.panel_client.Controls.Add(this.buton_back_client);
@@ -734,199 +928,16 @@
             this.textbox_VIN.Size = new System.Drawing.Size(119, 20);
             this.textbox_VIN.TabIndex = 7;
             // 
-            // variablepanel
+            // adminpaneltxt
             // 
-            this.variablepanel.Controls.Add(this.label8);
-            this.variablepanel.Controls.Add(this.label7);
-            this.variablepanel.Controls.Add(this.label6);
-            this.variablepanel.Controls.Add(this.label5);
-            this.variablepanel.Controls.Add(this.label4);
-            this.variablepanel.Controls.Add(this.label3);
-            this.variablepanel.Controls.Add(this.textBox7);
-            this.variablepanel.Controls.Add(this.textBox6);
-            this.variablepanel.Controls.Add(this.textBox5);
-            this.variablepanel.Controls.Add(this.textBox4);
-            this.variablepanel.Controls.Add(this.textBox3);
-            this.variablepanel.Controls.Add(this.textBox2);
-            this.variablepanel.Controls.Add(this.label2);
-            this.variablepanel.Controls.Add(this.dataGridView1);
-            this.variablepanel.Controls.Add(this.textBox1);
-            this.variablepanel.Controls.Add(this.searchbox);
-            this.variablepanel.Controls.Add(this.Search);
-            this.variablepanel.Controls.Add(this.Delete);
-            this.variablepanel.Controls.Add(this.Cancel);
-            this.variablepanel.Controls.Add(this.Add);
-            this.variablepanel.Location = new System.Drawing.Point(395, 12);
-            this.variablepanel.Name = "variablepanel";
-            this.variablepanel.Size = new System.Drawing.Size(201, 121);
-            this.variablepanel.TabIndex = 14;
-            // 
-            // Cancel
-            // 
-            this.Cancel.Location = new System.Drawing.Point(683, 405);
-            this.Cancel.Name = "Cancel";
-            this.Cancel.Size = new System.Drawing.Size(75, 23);
-            this.Cancel.TabIndex = 1;
-            this.Cancel.Text = "Cancel";
-            this.Cancel.UseVisualStyleBackColor = true;
-            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
-            // 
-            // Add
-            // 
-            this.Add.Location = new System.Drawing.Point(589, 406);
-            this.Add.Name = "Add";
-            this.Add.Size = new System.Drawing.Size(87, 23);
-            this.Add.TabIndex = 0;
-            this.Add.Text = "Add";
-            this.Add.UseVisualStyleBackColor = true;
-            this.Add.Click += new System.EventHandler(this.Add_Click_1);
-            // 
-            // Delete
-            // 
-            this.Delete.Location = new System.Drawing.Point(764, 405);
-            this.Delete.Name = "Delete";
-            this.Delete.Size = new System.Drawing.Size(75, 23);
-            this.Delete.TabIndex = 2;
-            this.Delete.Text = "Delete";
-            this.Delete.UseVisualStyleBackColor = true;
-            // 
-            // Search
-            // 
-            this.Search.Location = new System.Drawing.Point(845, 405);
-            this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(75, 23);
-            this.Search.TabIndex = 3;
-            this.Search.Text = "Search";
-            this.Search.UseVisualStyleBackColor = true;
-            // 
-            // searchbox
-            // 
-            this.searchbox.AllowDrop = true;
-            this.searchbox.Location = new System.Drawing.Point(764, 364);
-            this.searchbox.Name = "searchbox";
-            this.searchbox.Size = new System.Drawing.Size(156, 20);
-            this.searchbox.TabIndex = 4;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(11, 288);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 5;
-            // 
-            // dataGridView1
-            // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(11, 8);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(921, 264);
-            this.dataGridView1.TabIndex = 6;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(131, 295);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(35, 13);
-            this.label2.TabIndex = 7;
-            this.label2.Text = "label2";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Location = new System.Drawing.Point(11, 324);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 8;
-            // 
-            // textBox3
-            // 
-            this.textBox3.Location = new System.Drawing.Point(11, 364);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
-            this.textBox3.TabIndex = 9;
-            // 
-            // textBox4
-            // 
-            this.textBox4.Location = new System.Drawing.Point(11, 398);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(100, 20);
-            this.textBox4.TabIndex = 10;
-            // 
-            // textBox5
-            // 
-            this.textBox5.Location = new System.Drawing.Point(240, 292);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(100, 20);
-            this.textBox5.TabIndex = 11;
-            // 
-            // textBox6
-            // 
-            this.textBox6.Location = new System.Drawing.Point(240, 329);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(100, 20);
-            this.textBox6.TabIndex = 12;
-            // 
-            // textBox7
-            // 
-            this.textBox7.Location = new System.Drawing.Point(240, 368);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(100, 20);
-            this.textBox7.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(131, 332);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(35, 13);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(131, 367);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(35, 13);
-            this.label4.TabIndex = 15;
-            this.label4.Text = "label4";
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(131, 405);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(35, 13);
-            this.label5.TabIndex = 16;
-            this.label5.Text = "label5";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(352, 295);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(35, 13);
-            this.label6.TabIndex = 17;
-            this.label6.Text = "label6";
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(352, 332);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(35, 13);
-            this.label7.TabIndex = 18;
-            this.label7.Text = "label7";
-            // 
-            // label8
-            // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(352, 371);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(35, 13);
-            this.label8.TabIndex = 19;
-            this.label8.Text = "label8";
+            this.adminpaneltxt.Controls.Add(this.label_opt);
+            this.adminpaneltxt.Controls.Add(this.buton_goo);
+            this.adminpaneltxt.Controls.Add(this.comboBox1);
+            this.adminpaneltxt.Controls.Add(this.buton_back);
+            this.adminpaneltxt.Location = new System.Drawing.Point(194, 75);
+            this.adminpaneltxt.Name = "adminpaneltxt";
+            this.adminpaneltxt.Size = new System.Drawing.Size(239, 137);
+            this.adminpaneltxt.TabIndex = 15;
             // 
             // Form1
             // 
@@ -941,7 +952,9 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel_admin.ResumeLayout(false);
-            this.panel_admin.PerformLayout();
+            this.variablepanel.ResumeLayout(false);
+            this.variablepanel.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel_registerclient.ResumeLayout(false);
             this.panel_registerclient.PerformLayout();
             this.panel_specificinvoice.ResumeLayout(false);
@@ -952,9 +965,8 @@
             this.panel_removeclient.PerformLayout();
             this.panel_client.ResumeLayout(false);
             this.panel_client.PerformLayout();
-            this.variablepanel.ResumeLayout(false);
-            this.variablepanel.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.adminpaneltxt.ResumeLayout(false);
+            this.adminpaneltxt.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -968,58 +980,11 @@
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.Button buton_goo;
         private System.Windows.Forms.Button buton_back;
-        private System.Windows.Forms.Panel panel_registerclient;
-        private System.Windows.Forms.Panel panel_showstatistics;
-        private System.Windows.Forms.Panel panel_orderpieces;
-        private System.Windows.Forms.Panel panel_specificinvoice;
-        private System.Windows.Forms.Panel panel_specificclient;
-        private System.Windows.Forms.Panel panel_removeclient;
-        private System.Windows.Forms.TextBox textBox_vinn;
-        private System.Windows.Forms.TextBox textBox_doors;
-        private System.Windows.Forms.TextBox textBox_year;
-        private System.Windows.Forms.TextBox textBox_fuel;
-        private System.Windows.Forms.TextBox textBox_model;
-        private System.Windows.Forms.TextBox textBox_manufacturer;
-        private System.Windows.Forms.TextBox textBox_address;
-        private System.Windows.Forms.TextBox text_cnp;
-        private System.Windows.Forms.TextBox textBox_firstname;
-        private System.Windows.Forms.TextBox textBox_lastname;
-        private System.Windows.Forms.Label label_vinn;
-        private System.Windows.Forms.Label label_doors;
-        private System.Windows.Forms.Label label_year;
-        private System.Windows.Forms.Label label_fuel;
-        private System.Windows.Forms.Label label_address;
-        private System.Windows.Forms.Label label_cnp;
-        private System.Windows.Forms.Label label_model;
-        private System.Windows.Forms.Label label_manufacturer;
-        private System.Windows.Forms.Label label_firstname;
-        private System.Windows.Forms.Label label_lastname;
         private System.Windows.Forms.Panel panel_client;
         private System.Windows.Forms.Button buton_back_client;
         private System.Windows.Forms.Button buton_go;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox textbox_VIN;
-        private System.Windows.Forms.Button buton_done;
-        private System.Windows.Forms.Button buton_remove_client;
-        private System.Windows.Forms.TextBox textBox_remove_lastname;
-        private System.Windows.Forms.TextBox textBox_remove_firstname;
-        private System.Windows.Forms.Label label_remove_firstname;
-        private System.Windows.Forms.Label label_remove_lastname;
-        private System.Windows.Forms.TextBox textBox_remove_vin;
-        private System.Windows.Forms.Label label_remove_vin;
-        private System.Windows.Forms.TextBox textBox_specific_vin;
-        private System.Windows.Forms.Label label_specific_vin;
-        private System.Windows.Forms.Label label_specific_lastname;
-        private System.Windows.Forms.Button buton_specific_show;
-        private System.Windows.Forms.TextBox textBox_specific_lastname;
-        private System.Windows.Forms.TextBox textBox_specific_firstname;
-        private System.Windows.Forms.Label label_specific_firstname;
-        private System.Windows.Forms.TextBox textBox_specific_invoice;
-        private System.Windows.Forms.Label label_specific_invoice;
-        private System.Windows.Forms.Button buton_specific_invoice;
-        private System.Windows.Forms.Button buton_remove_client2;
-        private System.Windows.Forms.Button buton_specific_invoice2;
-        private System.Windows.Forms.Button buton_specific_client2;
         private System.Windows.Forms.Panel variablepanel;
         private System.Windows.Forms.Button Add;
         private System.Windows.Forms.Button Cancel;
@@ -1041,6 +1006,54 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Panel panel_registerclient;
+        private System.Windows.Forms.Button buton_done;
+        private System.Windows.Forms.TextBox textBox_vinn;
+        private System.Windows.Forms.TextBox textBox_doors;
+        private System.Windows.Forms.TextBox textBox_year;
+        private System.Windows.Forms.TextBox textBox_fuel;
+        private System.Windows.Forms.TextBox textBox_model;
+        private System.Windows.Forms.TextBox textBox_manufacturer;
+        private System.Windows.Forms.TextBox textBox_address;
+        private System.Windows.Forms.TextBox text_cnp;
+        private System.Windows.Forms.TextBox textBox_firstname;
+        private System.Windows.Forms.TextBox textBox_lastname;
+        private System.Windows.Forms.Label label_vinn;
+        private System.Windows.Forms.Label label_doors;
+        private System.Windows.Forms.Label label_year;
+        private System.Windows.Forms.Label label_fuel;
+        private System.Windows.Forms.Label label_address;
+        private System.Windows.Forms.Label label_cnp;
+        private System.Windows.Forms.Label label_model;
+        private System.Windows.Forms.Label label_manufacturer;
+        private System.Windows.Forms.Label label_firstname;
+        private System.Windows.Forms.Label label_lastname;
+        private System.Windows.Forms.Panel panel_showstatistics;
+        private System.Windows.Forms.Panel panel_orderpieces;
+        private System.Windows.Forms.Panel panel_specificinvoice;
+        private System.Windows.Forms.Button buton_specific_invoice2;
+        private System.Windows.Forms.TextBox textBox_specific_invoice;
+        private System.Windows.Forms.Label label_specific_invoice;
+        private System.Windows.Forms.Button buton_specific_invoice;
+        private System.Windows.Forms.Panel panel_specificclient;
+        private System.Windows.Forms.Button buton_specific_client2;
+        private System.Windows.Forms.TextBox textBox_specific_vin;
+        private System.Windows.Forms.Label label_specific_vin;
+        private System.Windows.Forms.Label label_specific_lastname;
+        private System.Windows.Forms.Button buton_specific_show;
+        private System.Windows.Forms.TextBox textBox_specific_lastname;
+        private System.Windows.Forms.TextBox textBox_specific_firstname;
+        private System.Windows.Forms.Label label_specific_firstname;
+        private System.Windows.Forms.Panel panel_removeclient;
+        private System.Windows.Forms.Button buton_remove_client2;
+        private System.Windows.Forms.TextBox textBox_remove_vin;
+        private System.Windows.Forms.Label label_remove_vin;
+        private System.Windows.Forms.Label label_remove_lastname;
+        private System.Windows.Forms.Button buton_remove_client;
+        private System.Windows.Forms.TextBox textBox_remove_lastname;
+        private System.Windows.Forms.TextBox textBox_remove_firstname;
+        private System.Windows.Forms.Label label_remove_firstname;
+        private System.Windows.Forms.Panel adminpaneltxt;
     }
 }
 

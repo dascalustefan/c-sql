@@ -17,17 +17,20 @@ namespace CustomWorks
         string vin;
         public Form1()
         {
+           
+
             InitializeComponent();
-            panel_client.Dock = DockStyle.Fill;
-            panel_admin.Dock = DockStyle.Fill;
-            panel_registerclient.Dock = DockStyle.Fill;
-            panel_removeclient.Dock = DockStyle.Fill;
-            panel_showstatistics.Dock = DockStyle.Fill;
-            panel_specificclient.Dock = DockStyle.Fill;
-            panel_specificinvoice.Dock = DockStyle.Fill;
-            variablepanel.Dock = DockStyle.Fill;
+            //adminpaneltxt.Dock = DockStyle.Fill;
+            //panel_client.Dock = DockStyle.Fill;
+            //panel_admin.Dock = DockStyle.Fill;
+            //panel_registerclient.Dock = DockStyle.Fill;
+            //panel_removeclient.Dock = DockStyle.Fill;
+            //panel_showstatistics.Dock = DockStyle.Fill;
+            //panel_specificclient.Dock = DockStyle.Fill;
+            //panel_specificinvoice.Dock = DockStyle.Fill;
+            //variablepanel.Dock = DockStyle.Fill;
 
-
+            adminpaneltxt.Visible = false;
             panel_client.Visible = false;
             panel_admin.Visible = false;
             panel_registerclient.Visible = false;
@@ -39,12 +42,18 @@ namespace CustomWorks
 
             //Image myimage = new Bitmap("D:\\Fac\\III\\Administrare baze de date\\Proiect\\CustomWorks\\1.jpg");
             //this.BackgroundImage = myimage;
+            this.Size = new System.Drawing.Size(400, 300);
         }
 
         private void buton_start_Click(object sender, EventArgs e)
         {
             panel_admin.Visible = true;
+            this.AutoSize = true;
+            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+
+            adminpaneltxt.Visible = true;
             panel_client.Visible = false;
+            this.Size = new System.Drawing.Size(300, 250);
             //Form2 frm = new Form2();
             //frm.ShowDialog();
         }
@@ -61,6 +70,8 @@ namespace CustomWorks
         private void button1_Click(object sender, EventArgs e)
         {
             panel_admin.Visible = false;
+           
+
         }
 
         private void buton_goo_Click(object sender, EventArgs e)
@@ -73,7 +84,17 @@ namespace CustomWorks
 
             if (selected_item == "Register client")
             {
+              //  panel_admin.Visible = false;
                 panel_registerclient.Visible = true;
+            }
+            if (selected_item == "Clienti")
+            {
+                //panel_admin.Visible = false;
+                adminpaneltxt.Visible = false;
+                //ComboBox1.
+                variablepanel.Visible = true;
+              
+                this.Size = new System.Drawing.Size(1000,2000);
             }
 
             if (selected_item == "Remove client")
