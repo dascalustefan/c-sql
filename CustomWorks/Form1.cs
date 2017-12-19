@@ -7,7 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-
+using System.Configuration;
+using System.Data.SqlClient;
 namespace CustomWorks
 {
    
@@ -20,15 +21,15 @@ namespace CustomWorks
            
 
             InitializeComponent();
-            //adminpaneltxt.Dock = DockStyle.Fill;
-            //panel_client.Dock = DockStyle.Fill;
-            //panel_admin.Dock = DockStyle.Fill;
-            //panel_registerclient.Dock = DockStyle.Fill;
-            //panel_removeclient.Dock = DockStyle.Fill;
-            //panel_showstatistics.Dock = DockStyle.Fill;
-            //panel_specificclient.Dock = DockStyle.Fill;
-            //panel_specificinvoice.Dock = DockStyle.Fill;
-            //variablepanel.Dock = DockStyle.Fill;
+            adminpaneltxt.Dock = DockStyle.Fill;
+            panel_client.Dock = DockStyle.Fill;
+            panel_admin.Dock = DockStyle.Fill;
+            panel_registerclient.Dock = DockStyle.Fill;
+            panel_removeclient.Dock = DockStyle.Fill;
+            panel_showstatistics.Dock = DockStyle.Fill;
+            panel_specificclient.Dock = DockStyle.Fill;
+            panel_specificinvoice.Dock = DockStyle.Fill;
+            variablepanel.Dock = DockStyle.Fill;
 
             adminpaneltxt.Visible = false;
             panel_client.Visible = false;
@@ -47,12 +48,10 @@ namespace CustomWorks
 
         private void buton_start_Click(object sender, EventArgs e)
         {
-            panel_admin.Visible = true;
-            this.AutoSize = true;
-            this.AutoSizeMode = AutoSizeMode.GrowAndShrink;
-
-            adminpaneltxt.Visible = true;
             panel_client.Visible = false;
+            panel_admin.Visible = true;
+            adminpaneltxt.Visible = true;
+            
             this.Size = new System.Drawing.Size(300, 250);
             //Form2 frm = new Form2();
             //frm.ShowDialog();
@@ -91,10 +90,13 @@ namespace CustomWorks
             {
                 //panel_admin.Visible = false;
                 adminpaneltxt.Visible = false;
-                //ComboBox1.
+                
                 variablepanel.Visible = true;
-              
-                this.Size = new System.Drawing.Size(1000,2000);
+                
+                this.Size = new System.Drawing.Size(1000,500);
+
+               
+             
             }
 
             if (selected_item == "Remove client")
