@@ -1,0 +1,161 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="garajauto" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=.;Initial Catalog=garajauto;Integrated Security=True" SettingsObjectName="CustomWorks.Properties.Settings" SettingsPropertyName="garajautoConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.brevet_dispozitiv" Member="brevet_dispozitivs">
+    <Type Name="brevet_dispozitiv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_mecanic" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="tipbrevet" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="mecanic_brevet_dispozitiv" Member="mecanic" ThisKey="fk_mecanic" OtherKey="id" Type="mecanic" IsForeignKey="true" />
+      <Association Name="tip_brevet_brevet_dispozitiv" Member="tip_brevet" ThisKey="tipbrevet" OtherKey="id" Type="tip_brevet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vanzator" Member="vanzators">
+    <Type Name="vanzator">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="prenume" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="data_angajarii" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="salariu" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="fk_director_tehnic" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="vanzator_vanzare" Member="vanzares" ThisKey="id" OtherKey="fk_angajat" Type="vanzare" />
+      <Association Name="director_tehnic_vanzator" Member="director_tehnic" ThisKey="fk_director_tehnic" OtherKey="id" Type="director_tehnic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.director_tehnic" Member="director_tehnics">
+    <Type Name="director_tehnic">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(130) NOT NULL" CanBeNull="false" />
+      <Column Name="prenume" Type="System.String" DbType="NChar(130) NOT NULL" CanBeNull="false" />
+      <Column Name="salariu" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data_angajarii" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="director_tehnic_vanzator" Member="vanzators" ThisKey="id" OtherKey="fk_director_tehnic" Type="vanzator" />
+      <Association Name="director_tehnic_mecanic" Member="mecanics" ThisKey="id" OtherKey="fk_director" Type="mecanic" />
+    </Type>
+  </Table>
+  <Table Name="dbo.dispozitiv" Member="dispozitivs">
+    <Type Name="dispozitiv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="brevet_necesar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(50) NOT NULL" CanBeNull="false" />
+      <Association Name="dispozitiv_utilizare_dispozitiv" Member="utilizare_dispozitivs" ThisKey="id" OtherKey="fk_dispozitiv" Type="utilizare_dispozitiv" />
+      <Association Name="tip_brevet_dispozitiv" Member="tip_brevet" ThisKey="brevet_necesar" OtherKey="id" Type="tip_brevet" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.fabricant" Member="fabricants">
+    <Type Name="fabricant">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(20) NOT NULL" CanBeNull="false" />
+      <Column Name="nr_telefon" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Association Name="fabricant_masina" Member="masinas" ThisKey="id" OtherKey="fk_brand" Type="masina" />
+    </Type>
+  </Table>
+  <Table Name="dbo.masina" Member="masinas">
+    <Type Name="masina">
+      <Column Name="vin" Type="System.String" DbType="VarChar(50) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="culoare" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Column Name="fk_tip" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_brand" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_proprietar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="fabricant_masina" Member="fabricant" ThisKey="fk_brand" OtherKey="id" Type="fabricant" IsForeignKey="true" />
+      <Association Name="proprietar_masina" Member="proprietar" ThisKey="fk_proprietar" OtherKey="id" Type="proprietar" IsForeignKey="true" />
+      <Association Name="tip_masina" Member="tip" ThisKey="fk_tip" OtherKey="id" Type="tip" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.mecanic" Member="mecanics">
+    <Type Name="mecanic">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="prenume" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="telefon" Type="System.String" DbType="NChar(13) NOT NULL" CanBeNull="false" />
+      <Column Name="data_angajare" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Column Name="fk_director" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="mecanic_brevet_dispozitiv" Member="brevet_dispozitivs" ThisKey="id" OtherKey="fk_mecanic" Type="brevet_dispozitiv" />
+      <Association Name="mecanic_operatie" Member="operaties" ThisKey="id" OtherKey="fk_mecanic" Type="operatie" />
+      <Association Name="mecanic_utilizare_dispozitiv" Member="utilizare_dispozitivs" ThisKey="id" OtherKey="fk_mecanic" Type="utilizare_dispozitiv" />
+      <Association Name="director_tehnic_mecanic" Member="director_tehnic" ThisKey="fk_director" OtherKey="id" Type="director_tehnic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.operatie" Member="operaties">
+    <Type Name="operatie">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_reparatie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_mecanic" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="mecanic_operatie" Member="mecanic" ThisKey="fk_mecanic" OtherKey="id" Type="mecanic" IsForeignKey="true" />
+      <Association Name="reparatie_operatie" Member="reparatie" ThisKey="fk_reparatie" OtherKey="id" Type="reparatie" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.piesa" Member="piesas">
+    <Type Name="piesa">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(90) NOT NULL" CanBeNull="false" />
+      <Column Name="fk_reparatie" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="cantitate" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_supplier" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Association Name="reparatie_piesa" Member="reparatie" ThisKey="fk_reparatie" OtherKey="id" Type="reparatie" IsForeignKey="true" />
+      <Association Name="supplier_piesa" Member="supplier" ThisKey="fk_supplier" OtherKey="id" Type="supplier" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.proprietar" Member="proprietars">
+    <Type Name="proprietar">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="prenume" Type="System.String" DbType="NChar(80) NOT NULL" CanBeNull="false" />
+      <Column Name="telefon" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="nrcard" Type="System.String" DbType="NChar(20)" CanBeNull="true" />
+      <Association Name="proprietar_masina" Member="masinas" ThisKey="id" OtherKey="fk_proprietar" Type="masina" />
+      <Association Name="proprietar_vanzare" Member="vanzares" ThisKey="id" OtherKey="fk_proprietar" Type="vanzare" />
+    </Type>
+  </Table>
+  <Table Name="dbo.reparatie" Member="reparaties">
+    <Type Name="reparatie">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_masina" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="reparatie_operatie" Member="operaties" ThisKey="id" OtherKey="fk_reparatie" Type="operatie" />
+      <Association Name="reparatie_piesa" Member="piesas" ThisKey="id" OtherKey="fk_reparatie" Type="piesa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.supplier" Member="suppliers">
+    <Type Name="supplier">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(40)" CanBeNull="true" />
+      <Column Name="telefon" Type="System.String" DbType="NChar(40)" CanBeNull="true" />
+      <Association Name="supplier_piesa" Member="piesas" ThisKey="id" OtherKey="fk_supplier" Type="piesa" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tip" Member="tips">
+    <Type Name="tip">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="nume" Type="System.String" DbType="NChar(30) NOT NULL" CanBeNull="false" />
+      <Association Name="tip_masina" Member="masinas" ThisKey="id" OtherKey="fk_tip" Type="masina" />
+    </Type>
+  </Table>
+  <Table Name="dbo.tip_brevet" Member="tip_brevets">
+    <Type Name="tip_brevet">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tip" Type="System.String" DbType="NChar(30)" CanBeNull="true" />
+      <Association Name="tip_brevet_brevet_dispozitiv" Member="brevet_dispozitivs" ThisKey="id" OtherKey="tipbrevet" Type="brevet_dispozitiv" />
+      <Association Name="tip_brevet_dispozitiv" Member="dispozitivs" ThisKey="id" OtherKey="brevet_necesar" Type="dispozitiv" />
+    </Type>
+  </Table>
+  <Table Name="dbo.utilizare_dispozitiv" Member="utilizare_dispozitivs">
+    <Type Name="utilizare_dispozitiv">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_mecanic" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_dispozitiv" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="data" Type="System.DateTime" DbType="Date NOT NULL" CanBeNull="false" />
+      <Association Name="dispozitiv_utilizare_dispozitiv" Member="dispozitiv" ThisKey="fk_dispozitiv" OtherKey="id" Type="dispozitiv" IsForeignKey="true" />
+      <Association Name="mecanic_utilizare_dispozitiv" Member="mecanic" ThisKey="fk_mecanic" OtherKey="id" Type="mecanic" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.vanzare" Member="vanzares">
+    <Type Name="vanzare">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="fk_angajat" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_proprietar" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="fk_piesa" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="amount" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Association Name="vanzator_vanzare" Member="vanzator" ThisKey="fk_angajat" OtherKey="id" Type="vanzator" IsForeignKey="true" />
+      <Association Name="proprietar_vanzare" Member="proprietar" ThisKey="fk_proprietar" OtherKey="id" Type="proprietar" IsForeignKey="true" />
+    </Type>
+  </Table>
+</Database>

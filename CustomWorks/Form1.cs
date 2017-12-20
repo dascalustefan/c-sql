@@ -95,7 +95,11 @@ namespace CustomWorks
                 
                 this.Size = new System.Drawing.Size(1000,500);
 
-               
+                using (DataClasses1DataContext dbContext = new DataClasses1DataContext())
+                {
+                    List<proprietar> result = dbContext.proprietars.ToList();
+                    dataGridView1.DataSource = result;
+                }
              
             }
 
