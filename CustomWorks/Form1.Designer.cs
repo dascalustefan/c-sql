@@ -31,6 +31,11 @@
             this.buton_start = new System.Windows.Forms.Button();
             this.buton_client = new System.Windows.Forms.Button();
             this.panel_admin = new System.Windows.Forms.Panel();
+            this.adminpaneltxt = new System.Windows.Forms.Panel();
+            this.label_opt = new System.Windows.Forms.Label();
+            this.buton_goo = new System.Windows.Forms.Button();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.buton_back = new System.Windows.Forms.Button();
             this.variablepanel = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.label8 = new System.Windows.Forms.Label();
@@ -99,24 +104,19 @@
             this.textBox_remove_lastname = new System.Windows.Forms.TextBox();
             this.textBox_remove_firstname = new System.Windows.Forms.TextBox();
             this.label_remove_firstname = new System.Windows.Forms.Label();
-            this.adminpaneltxt = new System.Windows.Forms.Panel();
-            this.label_opt = new System.Windows.Forms.Label();
-            this.buton_goo = new System.Windows.Forms.Button();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.buton_back = new System.Windows.Forms.Button();
             this.panel_client = new System.Windows.Forms.Panel();
             this.buton_back_client = new System.Windows.Forms.Button();
             this.buton_go = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.textbox_VIN = new System.Windows.Forms.TextBox();
             this.panel_admin.SuspendLayout();
+            this.adminpaneltxt.SuspendLayout();
             this.variablepanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel_registerclient.SuspendLayout();
             this.panel_specificinvoice.SuspendLayout();
             this.panel_specificclient.SuspendLayout();
             this.panel_removeclient.SuspendLayout();
-            this.adminpaneltxt.SuspendLayout();
             this.panel_client.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -158,6 +158,61 @@
             this.panel_admin.Name = "panel_admin";
             this.panel_admin.Size = new System.Drawing.Size(577, 254);
             this.panel_admin.TabIndex = 2;
+            // 
+            // adminpaneltxt
+            // 
+            this.adminpaneltxt.Controls.Add(this.label_opt);
+            this.adminpaneltxt.Controls.Add(this.buton_goo);
+            this.adminpaneltxt.Controls.Add(this.comboBox1);
+            this.adminpaneltxt.Controls.Add(this.buton_back);
+            this.adminpaneltxt.Location = new System.Drawing.Point(133, 84);
+            this.adminpaneltxt.Name = "adminpaneltxt";
+            this.adminpaneltxt.Size = new System.Drawing.Size(239, 137);
+            this.adminpaneltxt.TabIndex = 15;
+            // 
+            // label_opt
+            // 
+            this.label_opt.AutoSize = true;
+            this.label_opt.Location = new System.Drawing.Point(86, 16);
+            this.label_opt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label_opt.Name = "label_opt";
+            this.label_opt.Size = new System.Drawing.Size(69, 13);
+            this.label_opt.TabIndex = 8;
+            this.label_opt.Text = "Select option";
+            // 
+            // buton_goo
+            // 
+            this.buton_goo.Location = new System.Drawing.Point(160, 111);
+            this.buton_goo.Margin = new System.Windows.Forms.Padding(2);
+            this.buton_goo.Name = "buton_goo";
+            this.buton_goo.Size = new System.Drawing.Size(56, 19);
+            this.buton_goo.TabIndex = 10;
+            this.buton_goo.Text = "Go >";
+            this.buton_goo.UseVisualStyleBackColor = true;
+            this.buton_goo.Click += new System.EventHandler(this.buton_goo_Click);
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Director Tehnic",
+            "Clienti"});
+            this.comboBox1.Location = new System.Drawing.Point(72, 53);
+            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(92, 21);
+            this.comboBox1.TabIndex = 7;
+            // 
+            // buton_back
+            // 
+            this.buton_back.Location = new System.Drawing.Point(25, 111);
+            this.buton_back.Margin = new System.Windows.Forms.Padding(2);
+            this.buton_back.Name = "buton_back";
+            this.buton_back.Size = new System.Drawing.Size(56, 19);
+            this.buton_back.TabIndex = 9;
+            this.buton_back.Text = "< Back";
+            this.buton_back.UseVisualStyleBackColor = true;
+            this.buton_back.Click += new System.EventHandler(this.button1_Click);
             // 
             // variablepanel
             // 
@@ -827,66 +882,6 @@
             this.label_remove_firstname.TabIndex = 0;
             this.label_remove_firstname.Text = "First name";
             // 
-            // adminpaneltxt
-            // 
-            this.adminpaneltxt.Controls.Add(this.label_opt);
-            this.adminpaneltxt.Controls.Add(this.buton_goo);
-            this.adminpaneltxt.Controls.Add(this.comboBox1);
-            this.adminpaneltxt.Controls.Add(this.buton_back);
-            this.adminpaneltxt.Location = new System.Drawing.Point(133, 84);
-            this.adminpaneltxt.Name = "adminpaneltxt";
-            this.adminpaneltxt.Size = new System.Drawing.Size(239, 137);
-            this.adminpaneltxt.TabIndex = 15;
-            // 
-            // label_opt
-            // 
-            this.label_opt.AutoSize = true;
-            this.label_opt.Location = new System.Drawing.Point(86, 16);
-            this.label_opt.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
-            this.label_opt.Name = "label_opt";
-            this.label_opt.Size = new System.Drawing.Size(69, 13);
-            this.label_opt.TabIndex = 8;
-            this.label_opt.Text = "Select option";
-            // 
-            // buton_goo
-            // 
-            this.buton_goo.Location = new System.Drawing.Point(160, 111);
-            this.buton_goo.Margin = new System.Windows.Forms.Padding(2);
-            this.buton_goo.Name = "buton_goo";
-            this.buton_goo.Size = new System.Drawing.Size(56, 19);
-            this.buton_goo.TabIndex = 10;
-            this.buton_goo.Text = "Go >";
-            this.buton_goo.UseVisualStyleBackColor = true;
-            this.buton_goo.Click += new System.EventHandler(this.buton_goo_Click);
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
-            "Register client",
-            "Remove client",
-            "Specific client",
-            "Specific invoice",
-            "Order pieces",
-            "Show statistics",
-            "Clienti"});
-            this.comboBox1.Location = new System.Drawing.Point(72, 53);
-            this.comboBox1.Margin = new System.Windows.Forms.Padding(2);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(92, 21);
-            this.comboBox1.TabIndex = 7;
-            // 
-            // buton_back
-            // 
-            this.buton_back.Location = new System.Drawing.Point(25, 111);
-            this.buton_back.Margin = new System.Windows.Forms.Padding(2);
-            this.buton_back.Name = "buton_back";
-            this.buton_back.Size = new System.Drawing.Size(56, 19);
-            this.buton_back.TabIndex = 9;
-            this.buton_back.Text = "< Back";
-            this.buton_back.UseVisualStyleBackColor = true;
-            this.buton_back.Click += new System.EventHandler(this.button1_Click);
-            // 
             // panel_client
             // 
             this.panel_client.Controls.Add(this.buton_back_client);
@@ -952,6 +947,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel_admin.ResumeLayout(false);
+            this.adminpaneltxt.ResumeLayout(false);
+            this.adminpaneltxt.PerformLayout();
             this.variablepanel.ResumeLayout(false);
             this.variablepanel.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
@@ -963,8 +960,6 @@
             this.panel_specificclient.PerformLayout();
             this.panel_removeclient.ResumeLayout(false);
             this.panel_removeclient.PerformLayout();
-            this.adminpaneltxt.ResumeLayout(false);
-            this.adminpaneltxt.PerformLayout();
             this.panel_client.ResumeLayout(false);
             this.panel_client.PerformLayout();
             this.ResumeLayout(false);

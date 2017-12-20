@@ -94,12 +94,35 @@ namespace CustomWorks
                 variablepanel.Visible = true;
                 
                 this.Size = new System.Drawing.Size(1000,500);
+                
 
                 using (DataClasses1DataContext dbContext = new DataClasses1DataContext())
                 {
                     List<proprietar> result = dbContext.proprietars.ToList();
                     dataGridView1.DataSource = result;
+                    dataGridView1.AutoResizeRows();
+                  
+                    dataGridView1.AutoResizeColumns();
+
+
+                    //set autosize mode
+                    
+                   dataGridView1.Columns[0].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[1].AutoSizeMode = DataGridViewAutoSizeColumnMode.AllCells;
+                    dataGridView1.Columns[2].AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
+                    int i;
+                    //datagrid has calculated it's widths so we can store them
+                    for (i = 0; i <=dataGridView1.Columns.Count - 1; i++)
+                    {
+                        //store autosized widths
+                        int colw = dataGridView1.Columns[i].Width;
+                        //remove autosizing
+                        dataGridView1.Columns[i].AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
+                        //set width to calculated by autosize
+                        dataGridView1.Columns[i].Width = colw;
+                    }
                 }
+
              
             }
 
